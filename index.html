@@ -1,16 +1,43 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
+
 <head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style/normalize.css">
-	<link rel="stylesheet" type="text/css" href="style/main.css">
-	<script src="scripts/jquery-3.3.1.min.js"></script>
-	<script src="scripts/d3.min.js"></script>
-	<script src="scripts/js-yaml.min.js"></script>
-	<script src="scripts/main.js"></script>
+  <style type="text/css">
+    .linkButton {
+      font-family: 'Comic Sans MS';
+      font-size: 20px;
+      line-height: 20px;
+      color: #ffffff;
+      border-radius: 10px;
+      background-color: #00688B;
+      padding: 20px;
+      width: 200px;
+      height: 200px;
+    }
+
+    .buttonContainer {
+      display: flex;
+      flex: 1;
+      /* align-items: center;
+  justify-content: center; */
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <link rel='stylesheet' id='style-css'
+    href='http://www.findtheconversation.com/wp-content/themes/conversation_theme/style.css?ver=1' type='text/css'
+    media='all' />
 </head>
+
 <body>
-	<main id="tree" class="chart-container"></main>
-	<div id="bio" class="bio-display"></div>
+  <div class="buttonContainer">
+    <a href="/pages/laws/v3">
+      <button class="linkButton" type="button">LAWS</button>
+    </a>
+    <a href="/pages/geneology">
+      <button class="linkButton" type="button">GENEOLOGY</button>
+    </a>
+  </div>
 </body>
+
 </html>

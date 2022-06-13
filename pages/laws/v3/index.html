@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+		
+		<link rel="stylesheet" href="styles/styles-min.css" type="text/css" />
+
+	
+		<script src="scripts/jquery/jquery.min.js" type="text/javascript"></script>
+		<script src="scripts/jquery/jquery-ui.min.js" type="text/javascript"></script>
+		<script src="scripts/jquery/jquery.bgiframe-2.1.2.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="styles/jquery/jquery-ui-min.css" type="text/css" media="all" />
+
+		<script type="text/javascript" src="scripts/d3/d3.v3.min.js"></script>
+		<script type="text/javascript" src="scripts/d3/d3.geom.js"></script>
+		<script type="text/javascript" src="scripts/d3/d3.layout.js"></script>
+		
+		<script type="text/javascript" src="scripts/visualization.js"></script>
+		<script type="text/javascript" src="scripts/pagescript.js"></script>
+		
+		<script type="text/javascript" src="scripts/elements.js"></script>
+		<script type="text/javascript" src="scripts/relationships.js"></script>
+		<script type="text/javascript" src="scripts/svgStyles.js"></script>
+	</head>
+	<body>
+
+		<!-- AddThis Button END -->
+		<div id="d3viz">&nbsp;</div>
+		<div id="rightRail"></div>
+		<div id="backSection" style="display:none;">
+			<p id="backup">
+				<span id="backButton" class="backButton">Go Back</span>
+			</p>
+			<p id="reset">
+				<span id="resetButton" class="resetButton">Start Over</span>
+			</p>
+		</div>
+		<div style="height:1px;line-height:1px;width:100%;">&nbsp;</div>
+
+
+
+		<script type="text/javascript">
+			// variable setup
+			var rootNodeId = 0;
+			var rootNodeHistory= [];
+			
+			var w = $("#d3viz").width(),
+				h = $("#d3viz").height(),
+				node,
+				link;
+				
+			var nodes =[];
+			var links=[];
+				
+			// the d3 layout is force
+			var force = d3.layout.force()
+				.linkDistance(function(d) { return d.target.size * 4; })
+				.charge(function(d) { return d.children ? -1000 : -500; })
+				.size([w, h - 160])
+				.gravity(0.1)
+				.on("tick", tick);
+
+			// the visualization is an SVG appended to the body
+			var svg = d3.select("#d3viz").append("svg:svg")
+				.attr("width", "10px")
+				.attr("height", "20px")
+				.attr("class", "vizSVG");
+				
+			var tooltipDiv = d3.select("body").append("div")
+				.attr("class", "tooltip")
+				.style("opacity", 0)
+				.on("mouseup", hideToolTip)
+				.on("touchEnd", hideToolTip)
+				.on("mouseover", function(d) {
+					tooltipDiv.transition()
+						.duration(200)
+						.style("opacity", .9);
+				})
+				.on("mouseout", hideToolTip);
+				
+			$(document).ready(function() {
+				$("#backSection").hide();
+				
+				if (getQueryStringParam("commandmentID") != null){
+					rootNodeId = parseInt(getQueryStringParam("commandmentID")) + 174;
+				}
+				
+				if (getQueryStringParam("start") != null){
+					rootNodeId = parseInt(getQueryStringParam("start"));
+				}
+
+				if (getQueryStringParam("FullMT") != null){
+					rootNodeId = 789;
+				}
+
+				setupGradients();
+				setupShadow();
+				buildRightRail();
+				
+				setNodesAndLinks(rootNodeId);
+				update();
+			});
+		</script>
+
+
+
+		<!-- RefTagger from Logos. Visit http://www.logos.com/reftagger. This code should appear directly before the <//body> tag. -->
+		<script type="text/javascript" src="scripts/reftagger/referencetagging.js"></script>
+		<link rel="stylesheet" href="styles/reftagger/reftagger-min.css" type="text/css" />
+		<script type="text/javascript">
+			Logos.ReferenceTagging.lbsBibleVersion = "KJV";
+			Logos.ReferenceTagging.lbsLinksOpenNewWindow = true;
+			Logos.ReferenceTagging.lbsLogosLinkIcon = "dark";
+			Logos.ReferenceTagging.lbsNoSearchTagNames = [ "h2", "h3", "h3" ];
+			Logos.ReferenceTagging.lbsTargetSite = "biblia";
+			Logos.ReferenceTagging.lbsCssOverride = true;
+			Logos.ReferenceTagging.tag();
+		</script>
+	</body>
+</html>

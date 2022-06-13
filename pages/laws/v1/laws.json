@@ -1,0 +1,140 @@
+{
+  "name": "Yahawah",
+  "type": "positive",
+  "category": "All Good",
+  "level": "Most High",
+  "lawNumber": 0,
+  "children": [
+    {
+      "name": "Love Yahweh with all your heart, soul, and might. (Deuteronomy 6:5)",
+      "verses": ["Deuteronomy 6:5", "Matthew 22:37", "Mark 12:31"],
+      "type": "positive",
+      "category": "Worship Of Yahawah",
+      "level": "Ultimate Commandment",
+      "ultimateLawNumber": 1,
+      "lawNumber": 2,
+      "children": [
+        {
+          "name": "Believe in Yahweh as the Only Source of Power in the Universe. (Exodus 20:2)",
+          "type": "positive",
+          "category": "Worship Of Yahawah",
+          "level": "10 Commandments",
+          "commandmentLawNumber": 1,
+          "lawNumber": 3,
+          "verses": ["Exodus 20:2"]
+        },
+        {
+          "name": "Do not trust in any power but Yahweh. (Exodus 20:3)",
+          "type": "negative",
+          "category": "Worship Of Yahawah",
+          "level": "10 Commandments",
+          "commandmentLawNumber": 1,
+          "lawNumber": 4,
+          "verses": ["Exodus 20:3"]
+        },
+        {
+          "name": "Do not make images of the gods (false gods) to be worshiped (Exodus 20:4)",
+          "type": "negative",
+          "category": "Worship Of False Gods",
+          "level": "10 Commandments",
+          "commandmentLawNumber": 2,
+          "lawNumber": 5,
+          "verses": ["Exodus 20:4"]
+        },
+        {
+          "name": "Do not bow down to any false god. (Exodus 20:5-6)",
+          "type": "negative",
+          "category": "Worship Of False Gods",
+          "level": "10 Commandments",
+          "commandmentLawNumber": 2,
+          "lawNumber": 6,
+          "verses": ["Exodus 20:5-6"]
+        },
+        {
+          "name": "Thou shalt not take the name of the LORD thy God in vain; for the LORD will not hold him guiltless that taketh his name in vain. (Exodus 20:7)",
+          "category": "Blasphemy",
+          "level": "10 Commandments",
+          "commandmentLawNumber": 3,
+          "lawNumber": 7,
+          "verses": ["Exodus 20:4-7"],
+          "children": [
+            {
+              "name": "And ye shall not swear by my name falsely, neither shalt thou profane the name of thy God: I am the LORD.. (Leviticus 19:12)",
+              "category": "Blasphemy",
+              "level": "Laws",
+              "lawNumber": 8,
+              "verses": ["Leviticus 19:12"]
+            }
+          ]
+        },
+        {
+          "name": "Keep the Sabbath Day holy by making preparation in advance. (Exodus 20:8-11)",
+          "category": "Feasts and Sabbaths",
+          "level": "10 Commandments",
+          "commandmentLawNumber": 4,
+          "lawNumber": 8,
+          "verses": ["Exodus 20:8-11"]
+        },
+        {
+          "name": "Show honor and respect to parents. (Exodus 20:12)",
+          "category": "Family",
+          "level": "10 Commandments",
+          "commandmentLawNumber": 5,
+          "lawNumber": 9,
+          "verses": ["Exodus 20:12"]
+        }
+      ]
+    },
+    {
+      "name": "Love your neighbor, whether a brother or an enemy, as yourself. (Leviticus 19:18)",
+      "type": "positive",
+      "category": "Our Duties to Others",
+      "level": "Ultimate Commandment",
+      "ultimateLawNumber": 2,
+      "lawNumber": 2,
+      "verses": ["Leviticus 19:18", "Matthew 22:39", "Mark 12:30"],
+      "children": [
+        {
+          "name": "Do not murder. (Exodus 20:13)",
+          "category": "Judgements",
+          "level": "10 Commandments",
+          "commandmentLawNumber": 6,
+          "lawNumber": 10,
+          "verses": ["Exodus 20:13"]
+        },
+        {
+          "name": "Do not commit adultery. (Exodus 20:14)",
+          "category": "Judgements",
+          "level": "10 Commandments",
+          "commandmentLawNumber": 7,
+          "lawNumber": 11,
+          "verses": ["Exodus 20:14", "Leviticus 18:20"]
+        },
+        {
+          "name": "Do not steal. (Exodus 20:15)",
+          "category": "Loans, Busiesses",
+          "level": "10 Commandments",
+          "commandmentLawNumber": 8,
+          "lawNumber": 12,
+          "verses": ["Exodus 20:15"]
+        },
+        {
+          "name": "Do not give false testimony in a lawsuit or investigation. (Exodus 20:16)",
+          "category": "Judgements",
+          "level": "10 Commandments",
+          "commandmentLawNumber": 9,
+          "lawNumber": 13,
+          "verses": ["Exodus 20:16"]
+        },
+        {
+          "name": "Do not covet another man's possessions. (Exodus 20:17)",
+          "category": "Judgements",
+          "level": "10 Commandments",
+          "commandmentLawNumber": 10,
+          "lawNumber": 14,
+          "verses": ["Exodus 20:17"]
+        }
+      ]
+    }
+  ]
+}
